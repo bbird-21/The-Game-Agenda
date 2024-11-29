@@ -4,20 +4,14 @@
 	"version": "1.0",
 	"description": "Get TimeTable from The Game",
 	"icons": {
-	  "48": "icons/border-48.png"
+	  "48": "icons/calendar.png"
 	},
 	"permissions": [
 	  "activeTab"
 	],
-	"content_scripts": [
-	  {
-		"matches": ["*://planning.thegame-france.com/*"],
-		"js": ["getTimeTable.js"],
-		"run_at": "document_end"
+	"browser_action": {
+		"default_popup": "popup/popup.html",
+		"default_icon": "icons/calendar.png"
 	  }
-	],
-	"background": {
-	  "scripts": ["getTimeTable.js"],
-	  "persistent": false
-	}
-  }
+
+}
